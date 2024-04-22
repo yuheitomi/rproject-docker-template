@@ -1,0 +1,50 @@
+{
+    "copilot_enabled": false,
+    "copilot_indexing_enabled": true,
+    "default_open_project_location": "~/workspace",
+    "default_project_location": "~/workspace",
+    "graphics_backend": "ragg",
+    "highlight_r_function_calls": true,
+    "initial_working_directory": "~/workspace",
+    "insert_native_pipe_operator": true,
+    "jobs_tab_visibility": "shown",
+    "load_workspace": false,
+    "margin_column": 100,
+    "new_proj_use_renv": true,
+    "panes": {
+        "additional_source_columns": 0,
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "hiddenTabSet": [
+            "Tutorial"
+        ],
+        "quadrants": [
+            "Source",
+            "TabSet1",
+            "Console",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "History",
+            "Connections",
+            "Build",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Environment",
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "VCS",
+            "Viewer",
+            "Presentations"
+        ]
+    },
+    "rainbow_parentheses": true,
+    "restore_last_project": false,
+    "save_workspace": "never",
+    "scroll_past_end_of_document": true,
+    "server_editor_font": "PlemolJPConsole",
+    "server_editor_font_enabled": true
+}
