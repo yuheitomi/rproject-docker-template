@@ -3,8 +3,7 @@ services:
     build:
       dockerfile: ./Dockerfile
     volumes:
-      - ./workspace:/home/rstudio/:cached
-      - ./utils:/home/rstudio/utils:cached
+      - ./workspace:/home/rstudio/workspace:cached
 
       # Mount cache directory used by `renv` and `pak`
       - ~/.cache/R/renv:/home/rstudio/.cache/R/renv

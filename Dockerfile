@@ -19,6 +19,8 @@ RUN \
     # Install dependencies for usethis
     libgit2-dev
 
+# RUN chown -R rstudio:rstudio /home/rstudio
+
 RUN R -e "install.packages('renv')"
 
 RUN echo "copilot-enabled=1\\n" >> /etc/rstudio/rsession.conf
