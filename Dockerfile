@@ -1,4 +1,4 @@
-FROM rocker/rstudio:latest
+FROM rocker/rstudio:4.4
 
 RUN \
     --mount=type=cache,target=/var/lib/apt/lists \
@@ -19,8 +19,10 @@ RUN \
     # Install dependencies for usethis
     libgit2-dev
 
-# RUN chown -R rstudio:rstudio /home/rstudio
-
 RUN R -e "install.packages('renv')"
 
 RUN echo "copilot-enabled=1\\n" >> /etc/rstudio/rsession.conf
+
+# Create directories for R and RStudio in advance and change the owner to rstudio to 
+# avoid permission errors when mounting the volume.
+RUN su -c "mkdir -p /home/rstudio/{.cache/R,.config.,local/share}" rstudio
