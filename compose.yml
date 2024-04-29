@@ -9,6 +9,7 @@ services:
             # Mount cache directory used by `renv` and `pak`
             - ~/.cache/R/renv:/home/rstudio/.cache/R/renv
             - ~/.cache/R/pkgcache:/home/rstudio/.cache/R/pkgcache
+            - ~/.cache/rstudio-server:/home/rstudio/.cache/rstudio
 
             # Global RStudio config
             - ~/.config/rstudio-server:/home/rstudio/.config/rstudio
@@ -18,6 +19,10 @@ services:
         environment:
             - LC_ALL=en_US.UTF-8
             - TZ=Asia/Tokyo
+            # Enable `sudo` command in the RStudio terminal
+            # https://rocker-project.org/images/versioned/rstudio.html
+            - ROOT=true
+            - PASSWORD=password
             - DISABLE_AUTH=true
             - RENV_CONFIG_PAK_ENABLED=TRUE
             - RENV_PATHS_ROOT=/home/rstudio/.cache/R/renv
